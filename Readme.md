@@ -131,7 +131,12 @@ class DefaultController
 - pasta entity representam o objeto da tabela (ex: entidade usuario)
 - migrations sequencia de modificações com base em versões (somente estrutura e não dados)
 - repository coleção dos dados para fazermos consultas 
+
 - bin/console doctrine:database:create
+
+- chown www-data:www-data var/symfony.sqlite3 
+- chmod 755 var/symfony.sqlite3 
+
 - composer require maker  
 - vamos criar as tabelas bin/console make:entity
 - Usuario
@@ -141,9 +146,19 @@ class DefaultController
 - no
 - Essa tabela ainda nao existe no DB 
 - precisamos fazer um migration 
-- bin/console make:migration (cri as classes )
+- bin/console make:migration (cria as classes )
 - para cada versão podemos ter funcionalidades diferentes 
 - bin/console doctrine:migrations:migrate
 # Manipulando o DB 
 
+- composer require --dev symfony/var-dumper
+
+
+- podemos executar comandos sql do terminal 
+- bin/console doctrine:query:sql "SELECT * FROM usuario"
+
+
+# configurando a api 
+
 - 
+

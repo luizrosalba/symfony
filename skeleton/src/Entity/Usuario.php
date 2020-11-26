@@ -25,11 +25,6 @@ class Usuario
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $s;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $email;
 
     public function getId(): ?int
@@ -45,18 +40,6 @@ class Usuario
     public function setNome(string $nome): self
     {
         $this->nome = $nome;
-
-        return $this;
-    }
-
-    public function getS(): ?string
-    {
-        return $this->s;
-    }
-
-    public function setS(string $s): self
-    {
-        $this->s = $s;
 
         return $this;
     }
