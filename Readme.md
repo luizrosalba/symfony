@@ -11,7 +11,7 @@
 - symfony/flex ajudar a instalar e configurar 
 
 - binario (console)
-- config (rotas e servicos) 
+- config (rotas e servicos)  config > packages (componentes do symfony )
 - public raiz do sistema 
 - src = app do laravel 
 - var = storage do laravel 
@@ -62,7 +62,7 @@ index:
 ```
 - vamos converter a rota atual para executar com annotations 
 
-- compose require annotations
+- composer require annotations
 
 ```JS
 <?php 
@@ -94,3 +94,10 @@ class DefaultController
     }
 }
 ```
+
+- implementando as rotas da web e api 
+
+- bin/console debug:router mostra todas as rotas 
+
+# Desenvolvendo Route Model 
+
