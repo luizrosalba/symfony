@@ -101,3 +101,49 @@ class DefaultController
 
 # Desenvolvendo Route Model 
 
+- padrao MVC separa as responsabilidades
+- model : conexão de DB e persistência 
+- View : visual do sistema interface gráfica 
+- controler : gerencia e roteira , qual template será carregado , etc 
+
+
+# Twig - um gerenciador de template 
+
+- podemos usar em qquer projeto 
+- foco do twig é reaproveitamento de código neste caso as views 
+- o mesmo template pode ser reutilizado em diversas paginas assim como componentes de paginação , breadcrumb, carossel ... 
+- template será herdado pelas paginas filho 
+
+- vamos usar o symfony flex 
+- composer require twig 
+- ttemplates ficam na pasta templates e é adicionado o arquivo twig em config 
+- é semelhante ao yield do laravel , são espaços reservados para o conteúdo 
+- composer require symfony/asset (referencia os arquivos na pasta pública)
+- cada rota deve ter seu nome para ser fácil de  referenciar 
+
+
+# Doctrine - ORM do Symfony 
+
+- proprio para models do symfony 
+- composer require orm 
+- vamos usar o sqlite 
+- configurado via annotation 
+- pasta entity representam o objeto da tabela (ex: entidade usuario)
+- migrations sequencia de modificações com base em versões (somente estrutura e não dados)
+- repository coleção dos dados para fazermos consultas 
+- bin/console doctrine:database:create
+- composer require maker  
+- vamos criar as tabelas bin/console make:entity
+- Usuario
+- nome
+- enter
+- 150
+- no
+- Essa tabela ainda nao existe no DB 
+- precisamos fazer um migration 
+- bin/console make:migration (cri as classes )
+- para cada versão podemos ter funcionalidades diferentes 
+- bin/console doctrine:migrations:migrate
+# Manipulando o DB 
+
+- 
